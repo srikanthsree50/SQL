@@ -308,3 +308,14 @@ SYNTAX---BEGIN TRANSACTION
      BEGIN TRANSACTION
 	 ROLLBACK TRANSACTION S1
 	---THEN---IT--WILL--ROLLBACK--ONLY UPTO---STATEMENTS--BEFORE S1 TRANSACTION
+
+	----------------------JOINS------------------------------------------------
+	----------ANSI-FORMAT---WITH--ON------------------NON-ANSI--FORMAT--WITH---WHERE------
+	----INNER--DEFAULT-----OUTER----FULL--------EQUI--DEFAULT---NON--EQUI---SELF---NATURAL---
+	                         |
+---------------------LEFT--RIGHT---FULL-------------------------------------------------------
+			ANSI--JOINS----------
+	SYNTAX--SELECT * FROM TNAME1 T1,TNAME2 T2 WHERE T1.ID=T2.ID
+	
+	NON--ANSI--JOINS---------------------------
+	SYNTAX--SELECT * FROM TN1 JOIN TN2 ON CONDITION        
